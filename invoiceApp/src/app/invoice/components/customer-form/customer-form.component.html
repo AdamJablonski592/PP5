@@ -1,0 +1,54 @@
+{{ customer | json}}
+
+<div class="form-content" id="form-content">
+    <form id="formTest" onsubmit="sendData(event)" (ngSubmit)="saveData()">
+        <div class="mb-3">
+          <label for="companyName" class="form-label">Nazwa Firmy</label>
+          <input type="text" class="form-control" id="companyName" aria-describedby="emailHelp" required="True" name="companyName" [(ngModel)]="customer.companyName">
+        </div>
+        <div class="mb-3">
+            <label for="nip" class="form-label">NIP</label>
+            <input type="text" class="form-control" id="nip" required="True">
+          </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">Miasto</label>
+            <input type="text" class="form-control" id="city" required="True">
+        </div>
+        <div class="mb-3">
+            <label for="street" class="form-label">Ulica</label>
+            <input type="text" class="form-control" id="street" required="True">
+        </div>
+        <div class="mb-3">
+            <label for="houseNumber" class="form-label">Numer Domu</label>
+            <input type="text" class="form-control" id="houseNumber" required="True">
+        </div>
+        <div class="mb-3">
+            <label for="flatNumber" class="form-label">Numer Mieszkania</label>
+            <input type="text" class="form-control" id="flatNumber" required="False">
+        </div>
+        <div class="mb-3">
+            <label for="areaCode" class="form-label">Kod poctowy</label>
+            <input type="text" class="form-control" id="areaCode" required="True">
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Uwagi" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Uwagi</label>
+        </div>
+        <select class="form-select" aria-label="Default select example" id="formSelect">
+            <option selected>Branża</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Aktywny
+            </label>
+        </div> 
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary" type="button" onclick="fillData()">Fill</button>
+        <button class="btn btn-primary" type="button" onclick="getData(event)">Save</button>
+        <button class="btn btn-primary" type="button" onclick="showClients()">Show Clients</button>
+      </form>
+</div>

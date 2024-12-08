@@ -1,8 +1,9 @@
 class Supplier extends Customer{
-    constructor(accountNumberInput){
+    constructor(accountNumber: any){
         super();
-        accountNumber = accountNumberInput
-    }    
-    invoices = []
+        accountNumber = accountNumber
+    }
+    accountNumber:string = ""    
+    invoices:Invoice[] = []
 
 }
